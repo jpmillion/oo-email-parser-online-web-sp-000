@@ -11,6 +11,6 @@ class EmailAddressParser
   end
   
   def parse
-    @email_addresses.split(/(\,\s)|\s/).delete_if {|item| item.match(/\s/)}.uniq
+    @email_addresses.split(/, | /).uniq
   end
 end
